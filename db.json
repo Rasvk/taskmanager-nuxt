@@ -1,4 +1,33 @@
 {
-  "tasks": [{}],
-  "users": [{}]
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Test task",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin scelerisque quam, quis pulvinar tellus laoreet eget. Sed risus odio, viverra ac velit non, tempor sollicitudin nunc. Curabitur viverra porta sollicitudin. Vivamus tincidunt eget ipsum in accumsan. Aliquam bibendum, dui eget porta ultrices, odio nisi consectetur justo, at ornare nisi quam vitae nunc. Proin mollis tincidunt ipsum sit amet pulvinar. Phasellus tellus elit, rhoncus in suscipit ac, hendrerit ut nisi.",
+      "createdBy": {
+        "id": 1,
+        "name": "Rasmus Vedholm Krog"
+      },
+      "createdDate": "23/03/2022",
+      "deadlineDate": "30/03/2022"
+    },
+    {
+      "id": 3,
+      "title": "Test task 2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sollicitudin scelerisque quam, quis pulvinar tellus laoreet eget. Sed risus odio, viverra ac velit non, tempor sollicitudin nunc. Curabitur viverra porta sollicitudin. Vivamus tincidunt eget ipsum in accumsan. Aliquam bibendum, dui eget porta ultrices, odio nisi consectetur justo, at ornare nisi quam vitae nunc. Proin mollis tincidunt ipsum sit amet pulvinar. Phasellus tellus elit, rhoncus in suscipit ac, hendrerit ut nisi.",
+      "createdBy": {
+        "id": 1,
+        "name": "Rasmus Vedholm Krog"
+      },
+      "createdDate": "23/03/2022",
+      "deadlineDate": "30/03/2022"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Rasmus Vedholm Krog"
+    }
+  ],
+  "categories": []
 }
