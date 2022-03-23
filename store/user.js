@@ -1,3 +1,4 @@
+import TaskService from '~/services/TaskService.js'
 export const state = () => ({
   user: {}
 })
@@ -9,7 +10,15 @@ export const mutations = {
 }
 
 export const actions = {
-  fetchUser({ commit }, id) {}
+  fetchUser({ commit }, id) {
+    return TaskService.getUser(id).then((response) => {
+      commit('SET_USER', response.data)
+    })
+  }
 }
 
-// fetch user
+export const getters = {
+  getUserById: (state) => (id) => {
+    return state.tasks.find((user) => user.id === id)
+  }
+}

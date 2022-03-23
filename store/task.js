@@ -1,3 +1,5 @@
+import TaskService from '~/services/TaskService.js'
+
 export const state = () => ({
   task: {},
   tasks: [],
@@ -31,9 +33,16 @@ export const actions = {
   /* deleteing a task */
   deleteTask({ commit }, task) {},
   /* fetching all tasks */
-  fetchTasks({ commit }) {},
-  /* fetch task by id */
-  fetchTask({ commit, getters, state }, id) {},
+  fetchTasks({ commit }) {
+    return TaskService.getTasks().then((response) => {
+      commit('SET_TASKS', response.data)
+    })
+  },
+  fetchTask({ commit }, id) {
+    return TaskService.getTask(id).then((response) => {
+      commit('SET_TASKS', response.data)
+    })
+  },
   /* set task */
   setTask({ commit, getters }, id) {}
 }

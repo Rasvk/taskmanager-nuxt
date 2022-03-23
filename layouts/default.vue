@@ -9,7 +9,7 @@
 import NavBar from '~/components/NavBar.vue'
 export default {
   components: {
-    NavBar,
+    NavBar
   },
   head() {
     return {
@@ -19,16 +19,27 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Where you can find all the events taking place in your neighborhood',
-        },
-      ],
+            'Where you can find all the events taking place in your neighborhood'
+        }
+      ]
     }
-  },
+  }
 }
 </script>
 <style>
-#id {
+#app {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
+}
+input,
+textarea {
+  box-sizing: border-box;
+  border: solid 1px rgba(0, 0, 0, 0.4);
+}
+textarea {
+  width: 100%;
+  overflow: auto;
+  font-size: 20px;
 }
 </style>

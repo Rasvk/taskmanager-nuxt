@@ -20,5 +20,8 @@ export default {
   },
   deleteTask(task) {
     return apiClient.delete(`/tasks/${task.id}`)
+  },
+  getUser(id) {
+    return apiClient.get('/users/' + id)
   }
 }

@@ -9,16 +9,32 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import TaskList from '../components/TaskList.vue'
 import TaskShow from '../components/TaskShow.vue'
 import UserProfile from '../components/UserProfile.vue'
 export default {
   components: { UserProfile, TaskList, TaskShow },
+
+  async fetch({ store, error }) {
+    try {
+      await store.dispatch('task/fetchTasks')
+      // await store.dispatch('user/fetchUser')
+    } catch (e) {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch events at this time. Please try again.'
+      })
+    }
+  },
   head() {
     return {
       title: 'Task Manager'
     }
-  }
+  },
+  computed: mapState({
+    events: (state) => state.events.events
+  })
 }
 </script>
 
