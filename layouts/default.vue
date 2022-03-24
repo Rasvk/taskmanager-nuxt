@@ -32,6 +32,10 @@ export default {
   height: 100%;
   box-sizing: border-box;
 }
+body {
+  overflow-y: hidden;
+  padding-right: 15px;
+}
 input,
 textarea {
   box-sizing: border-box;
