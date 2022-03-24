@@ -44,9 +44,11 @@ export default {
 }
 
 .t-manager {
-  width: 100%;
+  margin-left: 20%;
+  width: 70%;
   height: 100%;
   display: grid;
+  margin: 0 auto;
   grid-template-columns: 1fr 1fr 2fr;
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="show">
     <h2>taskshow here</h2>
     <h3 v-if="task">{{ task.title }}</h3>
     <h5 v-if="task.deadlineDate">Deadline: {{ task.deadlineDate }}</h5>
@@ -18,4 +18,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.show {
+  background-color: blueviolet;
+  height: 100%;
+  width: 100%;
+}
+</style>
