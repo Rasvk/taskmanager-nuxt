@@ -44,7 +44,14 @@ export const actions = {
     })
   },
   /* set task */
-  setTask({ commit, getters }, id) {}
+  setTask({ commit, getters }, id) {
+    const task = getters.getTaskById(id)
+    if (task) {
+      commit('SET_TASK', task)
+    } else {
+      console.log('no such Task' + id)
+    }
+  }
 }
 export const getters = {
   getTaskById: (state) => (id) => {

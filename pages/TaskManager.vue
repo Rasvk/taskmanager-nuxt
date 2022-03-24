@@ -23,7 +23,7 @@ export default {
     } catch (e) {
       error({
         statusCode: 503,
-        message: 'Unable to fetch events at this time. Please try again.'
+        message: 'Unable to fetch tasks at this time. Please try again.'
       })
     }
   },
@@ -33,7 +33,7 @@ export default {
     }
   },
   computed: mapState({
-    events: (state) => state.events.events
+    tasks: (state) => state.task.tasks
   })
 }
 </script>
