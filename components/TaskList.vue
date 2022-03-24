@@ -20,8 +20,7 @@
 
     <transition name="slide" appear>
       <div v-if="showModal" class="modal">
-        <h1>Create Task Here</h1>
-
+        <create-task></create-task>
         <base-button :button-class="fillGradient" @click="changeModal">
           Create Task
         </base-button>
@@ -33,9 +32,10 @@
 <script>
 import { mapState } from 'vuex'
 import BaseButton from './base/BaseButton.vue'
+import CreateTask from './CreateTask.vue'
 import TaskCard from './TaskCard.vue'
 export default {
-  components: { TaskCard, BaseButton },
+  components: { TaskCard, BaseButton, CreateTask },
   data() {
     return {
       showModal: false,
@@ -109,6 +109,11 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   padding: 30px;
+  box-shadow: 10px 10px rgb(0, 0, 0, 0.3);
+}
+
+.modal:hover {
+  box-shadow: 10px 10px rgb(0, 0, 0, 0.5);
 }
 
 .fade-enter-active,
