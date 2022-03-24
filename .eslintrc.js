@@ -2,11 +2,11 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
     parser: '@babel/eslint-parser',
-    requireConfigFile: false,
+    requireConfigFile: false
   },
   extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
   plugins: [],
@@ -16,7 +16,8 @@ module.exports = {
       'error',
       {
         ignores: ['default', 'index', 'create', 'error'],
-      },
-    ],
-  },
+        'no-console': 'off'
+      }
+    ]
+  }
 }
