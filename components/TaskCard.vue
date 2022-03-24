@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="setClickedTask">
     <h4 class="title">{{ task.title }}</h4>
     <h5 class="shade">deadline: {{ task.deadlineDate }}</h5>
   </div>
@@ -12,9 +12,14 @@ export default {
     task: Object
   },
   computed: {
-    parsedDate() {
-      const eventDate = new Date(this.event.date)
-      return eventDate.toDateString()
+    /* parsedDate() {
+      const taskDate = new Date(this.task.date)
+      return taskDate.toDateString()
+    } */
+  },
+  methods: {
+    setClickedTask() {
+      this.$store.dispatch('task/setTask', this.task.id)
     }
   }
 }
