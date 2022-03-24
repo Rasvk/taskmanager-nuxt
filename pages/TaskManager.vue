@@ -26,6 +26,14 @@ export default {
         message: 'Unable to fetch tasks at this time. Please try again.'
       })
     }
+    try {
+      await store.dispatch('category/fetchCategories')
+    } catch (e) {
+      error({
+        statusCode: 503,
+        message: 'Unable to fetch categories at this time. Please try again.'
+      })
+    }
   },
   head() {
     return {
@@ -33,7 +41,8 @@ export default {
     }
   },
   computed: mapState({
-    tasks: (state) => state.task.tasks
+    tasks: (state) => state.task.tasks,
+    categories: (state) => state.category.categories
   })
 }
 </script>
