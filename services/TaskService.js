@@ -23,5 +23,8 @@ export default {
   },
   getUser(id) {
     return apiClient.get('/users/' + id)
+  },
+  getCategories() {
+    return apiClient.get('/categories')
   }
 }
