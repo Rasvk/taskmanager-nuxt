@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="user">
     <h2>this is where user info is displayed</h2>
   </div>
 </template>
@@ -8,4 +8,8 @@
 export default {}
 </script>
 
-<style scoped></style>
+<style scoped>
+.user {
+  height: 100%;
+}
+</style>

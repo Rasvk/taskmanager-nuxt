@@ -56,12 +56,11 @@ export default {
 <style scoped>
 .task-list {
   box-sizing: border-box;
-  align-items: center;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .t-list {
-  height: 100%;
+  height: 87%;
   overflow-y: scroll;
   overflow-x: hidden;
 }

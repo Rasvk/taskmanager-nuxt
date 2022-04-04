@@ -35,6 +35,7 @@ export default {
 body {
   overflow-y: hidden;
   padding-right: 15px;
+  background-color: rgba(28, 183, 255, 1);
 }
 input,
 textarea {

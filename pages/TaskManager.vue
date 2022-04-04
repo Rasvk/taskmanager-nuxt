@@ -54,11 +54,20 @@ export default {
 
 .t-manager {
   margin-left: 20%;
-  width: 70%;
-  height: 100%;
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  width: 54%;
+  height: auto;
   display: grid;
-  margin: 0 auto;
   grid-template-columns: 1fr 1fr 2fr;
+  border-radius: 50px;
+  padding: 50px;
+  padding-top: 0px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
 }
 
 .t-list {
