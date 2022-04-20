@@ -7,6 +7,14 @@
     <h6 v-if="task.createdDate">
       Created: {{ task.createdDate }} by {{ task.createdBy.name }}
     </h6>
+    <div>
+      <BaseButton
+        v-show="task.id"
+        button-class="cancelButton"
+        @click="deleteTask"
+        >Delete Task</BaseButton
+      >
+    </div>
   </div>
 </template>
 
@@ -14,7 +22,13 @@
 import { mapState } from 'vuex'
 
 export default {
-  computed: mapState({ task: (state) => state.task.task })
+  computed: mapState({ task: (state) => state.task.task }),
+  methods: {
+    deleteTask() {
+      this.$store.dispatch('task/deleteTask', this.task)
+      this.$forceUpdate()
+    }
+  }
 }
 </script>
 
