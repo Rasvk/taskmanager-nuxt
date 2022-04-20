@@ -17,6 +17,7 @@ module.exports = {
       {
         ignores: ['default', 'index', 'create', 'error']
       }
-    ]
+    ],
+    'no-console': 'off'
   }
 }

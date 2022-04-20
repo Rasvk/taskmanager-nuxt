@@ -51,7 +51,14 @@ export default {
 .button.fillGradient:active {
   background: plum;
 }
-
+.button.cancelButton {
+  background: red;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px 2px rgb(0, 0, 0, 0.3);
+}
 .button:active {
   background: darkgrey;
 }

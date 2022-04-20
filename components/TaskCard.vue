@@ -11,12 +11,7 @@ export default {
     // eslint-disable-next-line vue/require-default-prop
     task: Object
   },
-  computed: {
-    /* parsedDate() {
-      const taskDate = new Date(this.task.date)
-      return taskDate.toDateString()
-    } */
-  },
+  computed: {},
   methods: {
     setClickedTask() {
       this.$store.dispatch('task/setTask', this.task.id)

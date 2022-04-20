@@ -10,22 +10,23 @@
         class="card"
       />
     </div>
+    <div class="modalDiv">
+      <base-button :button-class="fillGradient" @click="changeModal"
+        >Create Task</base-button
+      >
+      <transition name="fade" appear>
+        <div v-if="showModal" class="modalOverlay" @click="changeModal"></div>
+      </transition>
 
-    <base-button :button-class="fillGradient" @click="changeModal"
-      >Create Task</base-button
-    >
-    <transition name="fade" appear>
-      <div v-if="showModal" class="modalOverlay" @click="changeModal"></div>
-    </transition>
-
-    <transition name="slide" appear>
-      <div v-if="showModal" class="modal">
-        <create-task></create-task>
-        <base-button :button-class="fillGradient" @click="changeModal">
-          Create Task
-        </base-button>
-      </div>
-    </transition>
+      <transition name="slide" appear>
+        <div v-if="showModal" class="modal">
+          <create-task></create-task>
+          <base-button :button-class="cancelButton" @click="changeModal">
+            Cancel
+          </base-button>
+        </div>
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -39,7 +40,8 @@ export default {
   data() {
     return {
       showModal: false,
-      fillGradient: 'fillGradient'
+      fillGradient: 'fillGradient',
+      cancelButton: 'cancelButton'
     }
   },
   computed: mapState({

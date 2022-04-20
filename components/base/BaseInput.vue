@@ -26,4 +26,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+label {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+  display: flex;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+}
+</style>

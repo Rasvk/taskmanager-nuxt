@@ -4,7 +4,8 @@ export const state = () => ({
   task: {},
   tasks: [],
   tasksTotal: 0,
-  doneTasks: 0
+  doneTasks: 0,
+  showModal: false
 })
 // set task
 export const mutations = {
@@ -29,7 +30,15 @@ export const mutations = {
 }
 export const actions = {
   /* create a task */
-  createTask({ commit }, task) {},
+  createTask({ commit }, task) {
+    return TaskService.postTask(task).then(() => {
+      commit('ADD_TASK', task)
+      commit('SET_TASK', task)
+    }) /*
+      .catch((error) => {
+        // console.log('There was an error creating your event: ' + error.response)
+      }) */
+  },
   /* deleteing a task */
   deleteTask({ commit }, task) {},
   /* fetching all tasks */
@@ -49,7 +58,7 @@ export const actions = {
     if (task) {
       commit('SET_TASK', task)
     } else {
-      console.log('no such Task' + id)
+      // console.log('no such Task' + id)
     }
   }
 }
