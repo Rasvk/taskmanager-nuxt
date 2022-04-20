@@ -54,6 +54,17 @@
       "finnishedDate": "",
       "deadlineDate": "2022-04-30T08:45:45.555Z",
       "completed": false
+    },
+    {
+      "id": 9477378,
+      "category": "Development",
+      "title": "asdlpasælædas",
+      "description": "dasømøldsam",
+      "createdBy": {},
+      "createdDate": "20/4/2022",
+      "finnishedDate": "",
+      "deadlineDate": "",
+      "completed": false
     }
   ],
   "users": [
@@ -62,10 +73,5 @@
       "name": "Rasmus Vedholm Krog"
     }
   ],
-  "categories": [
-    "Marketing",
-    "Design",
-    "Development",
-    "Management"
-  ]
+  "categories": ["Marketing", "Design", "Development", "Management"]
 }

@@ -59,6 +59,8 @@ export default {
 .task-list {
   box-sizing: border-box;
   height: 100%;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .t-list {

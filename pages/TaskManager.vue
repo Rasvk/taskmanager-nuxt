@@ -68,6 +68,8 @@ export default {
   padding-top: 0px;
   background-color: rgb(255, 255, 255);
   margin: 0 auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .t-list {

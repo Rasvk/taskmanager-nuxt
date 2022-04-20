@@ -1,6 +1,6 @@
 <template>
   <div class="show">
-    <h2>taskshow here</h2>
+    <h2>Taskshow here</h2>
     <h3 v-if="task">{{ task.title }}</h3>
     <h5 v-if="task.deadlineDate">Deadline: {{ task.deadlineDate }}</h5>
     <p v-if="task">{{ task.description }}</p>
