@@ -23,14 +23,14 @@
       "deadlineDate": "30/03/2022"
     },
     {
-      "id": 8707001,
-      "category": "",
-      "title": "TEST TEST",
-      "description": "Eat dinner at Moms",
+      "id": 8861228,
+      "category": "Development",
+      "title": "Testing ",
+      "description": "This is a test to see if forceupdate works",
       "createdBy": {},
       "createdDate": "20/4/2022",
       "finnishedDate": "",
-      "deadlineDate": "",
+      "deadlineDate": "2022-04-08T11:49:38.519Z",
       "completed": false
     }
   ],

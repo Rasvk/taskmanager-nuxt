@@ -21,15 +21,11 @@
       <transition name="slide" appear>
         <div v-if="showModal" class="modal">
           <create-task></create-task>
-          <base-button :button-class="cancelButton" @click="changeModal">
-            Cancel
-          </base-button>
         </div>
       </transition>
     </div>
   </div>
 </template>
-
 <script>
 import { mapState } from 'vuex'
 import BaseButton from './base/BaseButton.vue'
@@ -39,17 +35,22 @@ export default {
   components: { TaskCard, BaseButton, CreateTask },
   data() {
     return {
-      showModal: false,
+      // showModal: false,
       fillGradient: 'fillGradient',
       cancelButton: 'cancelButton'
     }
   },
   computed: mapState({
-    tasks: (state) => state.task.tasks
+    tasks: (state) => state.task.tasks,
+    showModal: (state) => state.manager.showModal
   }),
+
   methods: {
     changeModal() {
-      this.showModal = !this.showModal
+      this.$store.dispatch(
+        'manager/changeModal',
+        !this.$store.state.manager.showModal
+      )
     }
   }
 }
@@ -64,7 +65,7 @@ export default {
 }
 
 .t-list {
-  height: 87%;
+  height: 650px;
   overflow-y: scroll;
   overflow-x: hidden;
 }

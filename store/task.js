@@ -25,7 +25,7 @@ export const mutations = {
     state.tasks.push(task)
   },
   REMOVE_TASK(state, task) {
-    state.task.splice(state.task.indexOf(task), 1)
+    state.tasks.splice(state.tasks.indexOf(task), 1)
   }
 }
 export const actions = {
@@ -34,6 +34,7 @@ export const actions = {
     return TaskService.postTask(task)
       .then(() => {
         commit('ADD_TASK', task)
+        console.log('TASK ADDED: ' + task.id)
         commit('SET_TASK', task)
       })
       .catch((error) => {
@@ -45,7 +46,7 @@ export const actions = {
     return TaskService.deleteTask(task)
       .then((response) => {
         commit('REMOVE_TASK', response.data)
-        console.log('TASK REMOVED: ' + task)
+        console.log('TASK REMOVED: ' + task.id)
         commit('SET_TASK', {})
       })
       .catch((error) => {

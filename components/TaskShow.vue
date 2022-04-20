@@ -35,6 +35,6 @@ export default {
 <style scoped>
 .show {
   box-sizing: border-box;
-  height: 100%;
+  height: 650px;
 }
 </style>

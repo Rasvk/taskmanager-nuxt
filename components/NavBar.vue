@@ -37,6 +37,12 @@ export default {}
   margin-left: 20px;
 }
 
+.nuxt-link-active:hover {
+  background: rgb(87, 72, 252);
+  padding: 5px;
+  border-radius: 5px;
+}
+
 a {
   color: aliceblue;
   text-decoration: none;

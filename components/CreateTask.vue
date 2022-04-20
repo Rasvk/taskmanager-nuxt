@@ -34,6 +34,9 @@
       </div>
       <div class="buttons">
         <base-button :button-class="fillGradient"> Create Task </base-button>
+        <base-button :button-class="cancelButton" @click="changeModal">
+          Cancel
+        </base-button>
       </div>
     </form>
   </div>
@@ -56,7 +59,8 @@ export default {
     }
   },
   computed: mapState({
-    categories: (state) => state.category.categories
+    categories: (state) => state.category.categories,
+    showModal: (state) => state.manager.showModal
   }),
   methods: {
     currentDate() {
@@ -74,6 +78,13 @@ export default {
         }/${date.getFullYear()}`
         return formatDate
       }
+    },
+
+    changeModal() {
+      this.$store.dispatch(
+        'manager/changeModal',
+        !this.$store.state.manager.showModal
+      )
     },
 
     createFreshTask() {
@@ -95,8 +106,12 @@ export default {
     },
 
     createTask() {
-      // console.log('DISPATCH CREATE TASK')
       this.$store.dispatch('task/createTask', this.task)
+      this.$store.dispatch('manager/changeModal', !this.$store.showModal)
+      this.$store.dispatch(
+        'manager/changeModal',
+        !this.$store.state.manager.showModal
+      )
     }
   }
 }
