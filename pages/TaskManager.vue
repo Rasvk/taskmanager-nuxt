@@ -5,16 +5,18 @@
     </div>
     <div class="t-list"><task-list></task-list></div>
     <div class="t-show"><task-show></task-show></div>
+    <div class="b-bar"><button-bar></button-bar></div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
+import ButtonBar from '../components/ButtonBar.vue'
 import TaskList from '../components/TaskList.vue'
 import TaskShow from '../components/TaskShow.vue'
 import UserProfile from '../components/UserProfile.vue'
 export default {
-  components: { UserProfile, TaskList, TaskShow },
+  components: { UserProfile, TaskList, TaskShow, ButtonBar },
 
   async fetch({ store, error }) {
     try {
